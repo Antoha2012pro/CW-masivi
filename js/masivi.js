@@ -53,6 +53,7 @@
 // console.log(sum);
 
 
+
 // 2 Урок
 
 // const a = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]; // Вкладені масиви
@@ -121,3 +122,91 @@
 //     }
 // }
 // console.log(smallestNumber);
+
+
+
+// 3 Урок
+
+// const message = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint rem dolores numquam eaque consectetur explicabo optio itaque maiores ab. Delectus sapiente voluptates nihil quos, illo recusandae ad earum minus iure!";
+// const result = message.split(","); // Перетворює рядок у масив по роздільнику (деліметер)
+// console.log(result);
+// for (const elem of result) { // Перербирає кожний індекс самостійно
+//     console.log(elem);
+// }
+
+// const friends = ["Anton", "David", "Oleksandr", "Artem"];
+// const string = friends.join(", ") // Перетворює масив у рядочок роздільником (деліметер)
+// console.log(string);
+
+
+//Задача
+
+//Робимо slug з назви статті з URL адреси,
+// Заголовок статті складається тільки з букв та пропусків,
+// Нормалізуємо рядок,
+// Розбиваємо по словах,
+// Записуємо в рядок з роздільником,
+// Чейнінг
+// повинно получитися top-10-benefits-of-react-fremework
+
+// const title = "Top 10 Benefits Of React Fremework";
+// 1 Варіант
+// const result = title.split(" ");
+// console.log(result);
+// const result2 = result.join("-");
+// console.log(result2);
+// const result3 = result2.toLowerCase();
+// console.log(3);
+// 2 Варіант
+// const result = title.split(" ").join("-").toLowerCase(); // Чейнінг
+// console.log(result);
+
+
+// const friends = ["Anton", "David", "Oleksandr", "Artem"];
+// console.log(friends.indexOf("Anton")); // Повертає індекс знайденого елемента 
+// console.log(friends.indexOf("qweqwe")); // Повертає -1 якщо не знайдено входження
+// console.log(friends.includes("qwe")); // Повертає true або false якщо рядка не знайдено
+// console.log(friends.indexOf("alias") === -1); // Якщо alias нема, то буде true
+
+// for (let i = 0; i < friends.length; i += 1) {
+//     const element = friends[i];
+//     if (element === "Oleksandr") {
+//         console.log("Я знайшовся");
+//     }
+// }
+
+
+//Задача 3
+// створити масив гравців, додати до кожного гравця N, де n це порядковий номер.
+// Наприклад "Polly" => "Polly-1"
+
+// const userGames = ["Mango", "Polly", "Ajaks"];
+// let number = 0;
+// for(let i=0; i<userGames.length; i+=1){
+//     number+=1
+//     const res = (`${userGames[i]} -${+number}`);
+
+//     console.log(res);
+// }
+
+
+// Умова: Виведи повідомлення, якщо слово є у списку заборонених.
+
+// const forbiddenWords = ["спам", "реклама", "шахрайство"];
+// const word = "реклама";
+// if (forbiddenWords.includes(word)) {
+//     alert("Слово заборонено");
+// }
+
+
+// Видаляє      shift                                 pop
+const friends = ["Anton", "David", "Oleksandr", "Artem"];
+// Додає       unshift                                push  
+
+friends.unshift("Katya", "Timur"); // Додає початок
+friends.push("Yura", "Nazar"); // Додає кінець
+// Видаляти можна тільки по одному!
+friends.shift("Katya"); // Видаляє початок
+friends.pop("Yura"); // Видаляє кінець
+
+console.log(friends);
