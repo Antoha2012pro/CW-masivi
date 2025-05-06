@@ -199,14 +199,92 @@
 // }
 
 
-// Видаляє      shift                                 pop
-const friends = ["Anton", "David", "Oleksandr", "Artem"];
-// Додає       unshift                                push  
+// // Видаляє      shift                                 pop
+// const friends = ["Anton", "David", "Oleksandr", "Artem"];
+// // Додає       unshift                                push  
 
-friends.unshift("Katya", "Timur"); // Додає початок
-friends.push("Yura", "Nazar"); // Додає кінець
-// Видаляти можна тільки по одному!
-friends.shift("Katya"); // Видаляє початок
-friends.pop("Yura"); // Видаляє кінець
+// friends.unshift("Katya", "Timur"); // Додає початок
+// friends.push("Yura", "Nazar"); // Додає кінець
+// // Видаляти можна тільки по одному!
+// friends.shift("Katya"); // Видаляє початок
+// friends.pop("Yura"); // Видаляє кінець
 
-console.log(friends);
+// console.log(friends);
+
+// Напиши скрипт який рахує суму елементів двух масивів. Без методу concat()
+
+
+
+
+
+
+
+
+
+// Урок 4
+
+// const friends = ["Anton", "David", "Oleksandr", "Artem"];
+// const copFriend = friends.slice(0,2); // Якщо нічого не буде то буде копія. 0,2 Це від 1 до 2. Елементи не включно останнього
+// console.log(friends);
+// console.log(copFriend);
+
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+// const copyArr = arr.slice() // Копія масиву
+// Видалення елементів
+// const delArray = arr.splice(); // Видалити всі елементи не включно останнього. Якщо нічого не буде то буде вирізаний цей масив
+// console.log(delArray);
+// console.log(arr);
+
+// copyArr.splice(2,0, 100, 200, [123, 456]) // На третій індекс поставити значення 100 та більше. Додавання елементів без видалення
+// console.log(copyArr);
+
+// copyArr.splice(4, 1, "new 5"); // (4 - Індекс на який замінювати, 1 - Скільки елементів замінити, Далі вже що потрібно додати). Додавання елементів з заміною.
+// console.log(copyArr);
+
+// const array1 = [5, 10, 15, 20];
+// const array2 = [10, 20, 30];
+// let sum = 0
+
+// Без concat()
+// for (let i = 0; i < array1.length; i += 1) {
+//     // console.log(array[i]); 
+//     sum += array1[i]; 
+// } 
+// for (let i = 0; i < array2.length; i += 1) { 
+//     // console.log(array1[i]); 
+//     sum += array2[i]; 
+// } 
+// console.log(sum);
+
+// З сoncat()
+// const array3 = [2, 4, 6, 8]
+// const array4 = array1.concat(array2, array3); // До array1 зшити array2, array3 та більше
+// console.log(array4);
+
+// З rest
+// const array5 = [...array1, ...array2, ... array3]
+// console.log(array5);
+
+
+//Задача 1 Створіть масив styles з елементами 'Джаз' i 'Блюз'. Додайте 'Рок-н-ролл' в кінець масиву. Замініть значення в середині масиву на 'Класика'. Видаліть перший елемент масиву і покажіть його. Додайте 'Реп' і 'Реггі' на початок масиву. Виведіть масив в консоль.
+
+const styles = ['Джаз', 'Блюз'];
+styles.push('Рок-н-ролл');
+styles.splice(1, 1, 'Класика')
+const delStyles = styles.shift();
+console.log(delStyles);
+styles.unshift('Реп', 'Реггі')
+console.log(styles);
+
+// Створіть масив фруктів, для якого:
+// 1) За допомогою методів масиву видаліть спочатку та скінця по фрукту,
+// на їхнє місце додати нові фрукти.
+//  2) Видалити 3 елемент, та на його місце вставити декілька інших фруктів використовуючи метод splice;
+
+const fruits = ["apple", "banana", "orange", "watermelon"];
+fruits.shift();
+fruits.unshift("mango");
+fruits.pop()
+fruits.push("pineapple")
+fruits.splice(2, 1, 'kiwi', 'strawbarry');
+console.log(fruits);
